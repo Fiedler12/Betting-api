@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  bettingapi:
+    image: bettingapi
+    build:
+      context: . 
+      dockerfile: ./Dockerfile
+    container_name: bettingapi
+    ports:
+      - 8080:8080
+networks:
+  betting-net:
+    name: betting-net
+    external: true
